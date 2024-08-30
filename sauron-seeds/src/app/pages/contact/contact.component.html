@@ -1,0 +1,33 @@
+<div class="contact-us container my-5">
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <h2>Contact Us</h2>
+        <form  #contactForm="ngForm">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" ngModel required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+  
+      <!-- How Can We Help You Section -->
+      <div class="col-md-6">
+        <h2>How Can We Help You?</h2>
+        <div class="help-box">
+          <p>We're here to assist you with any questions or concerns you might have. Whether it's about our products, services, or something else, don't hesitate to reach out!</p>
+          <ul>
+            <li>Support: supportexample.com</li>
+            <li>Customer Service: 123-456-7890</li>
+            <li>Feedback: feedbackexample.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
