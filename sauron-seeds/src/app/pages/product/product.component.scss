@@ -1,0 +1,447 @@
+/**main hero**/
+.product-page-container {
+    padding: 20px;
+    text-align: center;
+
+    .header {
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .company-info {
+            margin-top: 30px;
+
+            h2 {
+                font-size: 2rem;
+                color: #28a745;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    font-size: 1rem;
+                    color: #666;
+                    margin-bottom: 10px;
+                    position: relative;
+                    padding-left: 20px;
+
+                    &:before {
+                        content: '\2022';
+                        color: #28a745;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* products-page.component.scss */
+// .products-container {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 20px;
+//     padding: 20px;
+//     flex-wrap: wrap;
+//   }
+
+//   .product-card {
+//     flex: 1 1 22%;
+//     background: #f8f9fa;
+//     padding: 20px;
+//     border-radius: 10px;
+//     text-align: center;
+//     position: relative;
+//     overflow: hidden;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     opacity: 0;
+//     animation: fadeIn 1s ease-out forwards;
+//     transition: transform 0.3s ease, opacity 0.3s ease;
+
+//     &:nth-child(1) {
+//       animation-delay: 0.3s;
+//     }
+//     &:nth-child(2) {
+//       animation-delay: 0.6s;
+//     }
+//     &:nth-child(3) {
+//       animation-delay: 0.9s;
+//     }
+//     &:nth-child(4) {
+//       animation-delay: 1.2s;
+//     }
+
+//     .card-content {
+//       position: relative;
+//       z-index: 2;
+//     }
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: -100%;
+//       width: 100%;
+//       height: 100%;
+//       background: rgba(40, 167, 69, 0.8);
+//       transition: left 0.3s ease-in-out;
+//       z-index: 1;
+//     }
+
+//     &:hover {
+//       transform: scale(1.05);
+
+//       &:before {
+//         left: 0;
+//       }
+//     }
+//   }
+
+//   @keyframes fadeIn {
+//     0% {
+//       opacity: 0;
+//       transform: translateY(20px);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
+//   /* Update the animation keyframes for each card */
+// @keyframes fadeInFromLeft {
+//     0% {
+//       opacity: 0;
+//       transform: translateX(-20px);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: translateX(0);
+//     }
+//   }
+
+//   @keyframes fadeInFromRight {
+//     0% {
+//       opacity: 0;
+//       transform: translateX(20px);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: translateX(0);
+//     }
+//   }
+
+//   @keyframes fadeInFromTop {
+//     0% {
+//       opacity: 0;
+//       transform: translateY(-20px);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
+
+//   @keyframes fadeInFromBottom {
+//     0% {
+//       opacity: 0;
+//       transform: translateY(20px);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
+
+//   .product-card:nth-child(1) {
+//     animation: fadeInFromLeft 1s ease-out forwards 0.3s;
+//   }
+
+//   .product-card:nth-child(2) {
+//     animation: fadeInFromRight 1s ease-out forwards 0.6s;
+//   }
+
+//   .product-card:nth-child(3) {
+//     animation: fadeInFromTop 1s ease-out forwards 0.9s;
+//   }
+
+//   .product-card:nth-child(4) {
+//     animation: fadeInFromBottom 1s ease-out forwards 1.2s;
+//   }
+
+
+
+/* product-page.component.scss */
+/* progress-section.component.scss */
+/* progress-section.component.scss */
+/* progress-section.component.scss */
+.progress-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 30px;
+
+    .left-content {
+        flex: 1;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .image{
+            width:10%;
+            height: 10%;
+          }
+    }
+
+    .right-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .parameters {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .parameter {
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+
+                h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.5rem;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: #666;
+                    margin-bottom: 1rem;
+                }
+
+                .progress-bar-container {
+                    position: relative;
+                    height: 10px;
+                    background: #ddd;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    .progress-bar {
+                        height: 100%;
+                        background: #28a745;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0%;
+                        transition: width 2s ease-in-out;
+                    }
+
+                    .percentage {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 0.9rem;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Apply the animation to each progress bar */
+.parameter {
+    &:hover .progress-bar {
+        width: attr(data-progress);
+    }
+}
+
+
+
+
+/***product name**/
+/* product-page.component.scss */
+
+.styled-products-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.styled-product-card {
+    flex: 1 1 22%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) rotateY(0deg);
+
+    &:hover {
+        transform: translateY(-10px) perspective(1000px) rotateY(5deg);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-card-content {
+        position: relative;
+        z-index: 2;
+        padding: 20px 10px;
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .styled-hover-line {
+            width: 0;
+            /* Line is initially hidden */
+            height: 3px;
+            background: linear-gradient(to right, #28a745, #85d744);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width 0.4s ease-in-out;
+            /* Smooth transition for the line */
+        }
+    }
+
+    &:hover .styled-hover-line {
+        width: 100% !important;
+        /* Line expands to full width on hover */
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: rgba(40, 167, 69, 0.2);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    &:before {
+        top: -20px;
+        left: -20px;
+    }
+
+    &:after {
+        bottom: -20px;
+        right: -20px;
+    }
+}
+
+
+/***testimonial***/
+
+
+/***testimonial***/
+.testimonial-section {
+    .content {
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+
+            .stars {
+                color: #ffcc00;
+                margin-bottom: 0.5rem;
+
+                i {
+                    margin-right: 2px;
+                }
+            }
+
+            .message {
+                font-size: 1.1rem;
+                color: #555;
+                margin-bottom: 0.5rem;
+            }
+
+            .name {
+                font-size: 1rem;
+                font-weight: bold;
+                color: #333;
+            }
+        }
+
+        .btn {
+            align-self: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}

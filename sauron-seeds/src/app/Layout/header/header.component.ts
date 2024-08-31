@@ -21,7 +21,6 @@ export class HeaderComponent {
   @ViewChild('navbarArea') navbarArea:any;
 
   constructor(private router: Router) {
-    this.onScroll();
   }
 
   ngOnInit(): void {

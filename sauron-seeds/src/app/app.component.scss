@@ -1,10 +1,18 @@
 /*===========================
 		COMMON css
 ===========================*/
+
+
+/* You can add global styles to this file, and also import other style files */
+$primary-color: #3498db; // Example primary color
+$secondary-color: #2ecc71; // Example secondary color
+$accent-color: #e74c3c; // Example accent color
+$text-color: #d2cccc; // Example text color
+$background-color:#995333; // Example background color
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   font-family: "Sen", sans-serif;
@@ -241,31 +249,31 @@ p {
   transform: translate3d(-50%, -50%, 0) scale(1.3);
 }
 
-.scroll-top {
-  width: 45px;
-  height: 45px;
-  background: #37C2CC;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: #fff;
-  border-radius: 5px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 9;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.scroll-top:hover {
-  color: #fff;
-  background: rgba(55, 194, 204, 0.8);
-}
+// .scroll-top {
+//   width: 45px;
+//   height: 45px;
+//   background: #37C2CC;
+//   display: none;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 18px;
+//   color: #fff;
+//   border-radius: 5px;
+//   position: fixed;
+//   bottom: 30px;
+//   right: 30px;
+//   z-index: 9;
+//   cursor: pointer;
+//   -webkit-transition: all 0.3s ease-out 0s;
+//   -moz-transition: all 0.3s ease-out 0s;
+//   -ms-transition: all 0.3s ease-out 0s;
+//   -o-transition: all 0.3s ease-out 0s;
+//   transition: all 0.3s ease-out 0s;
+// }
+// .scroll-top:hover {
+//   color: #fff;
+//   background: rgba(55, 194, 204, 0.8);
+// }
 
 @keyframes animation1 {
   0% {

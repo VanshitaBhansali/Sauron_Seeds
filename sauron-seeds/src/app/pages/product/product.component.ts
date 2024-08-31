@@ -1,28 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 import { CountUpModule } from 'ngx-countup';
-import { FooterComponent } from '../../Layout/footer/footer/footer.component';
-
 interface Testimonial {
   name: string;
   message: string;
   rating: number;
 }
 @Component({
-  selector: 'app-home',
+  selector: 'app-product',
   standalone: true,
-  imports: [CountUpModule,CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  imports: [CommonModule,CountUpModule],
+  templateUrl: './product.component.html',
+  styleUrl: './product.component.scss'
 })
-
-
-export class HomeComponent {
-  trustedFarmers: number = 1500;
-  positiveFeedback: number = 98;
-  presenceCountries: number = 25;
-  uniqueProducts: number = 120; // Example additional counter
+export class ProductComponent {
+  products = [
+    { title: 'High Quality', description: 'Our products are made from the highest quality materials.' },
+    { title: 'Trustworthy', description: 'We guarantee the trustworthiness of our products.' },
+    { title: 'Sustainable', description: 'Sustainability is at the heart of our production process.' },
+    { title: 'Innovative', description: 'Innovation drives our products and solutions.' }
+  ];
+  seeds = [
+    { title: 'Cereal Seeds', description: 'High-quality cereal seeds that ensure great yield and adaptability across diverse climates.' },
+    { title: 'Pulses Seeds', description: 'Top-quality pulses seeds known for their growth efficiency and robust nutritional value.' },
+    { title: 'Oil Seeds', description: 'Premium oil seeds for enhanced oil extraction and rich nutrient content.' },
+    { title: 'Vegetable Seeds', description: 'Superior vegetable seeds with excellent growth potential and disease resistance.' }
+  ];
   testimonials: Testimonial[] = [
     {
       name: 'John Doe',
@@ -45,13 +48,11 @@ export class HomeComponent {
       rating: 3
     }
   ];
-  activeIndex = 0;
+  trustedFarmers: number = 1500;
+
   currentIndex: number = 0;
   displayedTestimonials: Testimonial[] = [this.testimonials[this.currentIndex]];
 
-  showNextTestimonial(index: number): void {
-    this.activeIndex = (index + 1) % this.testimonials.length;
-  }
   nextTestimonial() {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];
@@ -61,9 +62,5 @@ export class HomeComponent {
     this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];
   }
-  @ViewChild('content') content!: ElementRef;
-  constructor() {}
-
-  ngOnInit(): void {
-  }
+ 
 }

@@ -25,7 +25,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "bootstrap": "^5.3.3",
-    "ng-scrollreveal": "^2.2.0",
     "ngx-countup": "^13.2.0",
     "primeng": "^17.18.9",
     "rxjs": "~7.8.0",

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color:  #f2e1d9;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #995333;
+    --primary-color-dark: #f2e1d9;/* Darkened color for hover */
+  --primary-color-darker: #995333;/* Darker color for active */
+  }
+  $primary-color:  #f2e1d9;
+$primary-color-dark: darken($primary-color, 10%);
+$primary-color-darker: darken($primary-color, 20%);

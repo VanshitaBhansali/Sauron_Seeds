@@ -1,0 +1,111 @@
+<!-- product-page.component.html -->
+<div class="product-page-container">
+    <header class="header">
+        <div class="row">
+            <div class="col-md-6">
+        <h1 >ABC Seeds</h1>
+        <p>Discover our range of high-quality seeds for various needs.</p>
+         <!-- Card 1 -->
+         <div class="col-sm-6 counter-box">
+            <div class="counter-icon">
+              <i class="fas fa-tractor"></i>
+            </div>
+            <h3>
+              <span [countUp]="trustedFarmers"></span>+
+            </h3>
+            <p>Trusted Farmers</p>
+          </div>
+        
+    </div>
+        <div class="company-info col-md-6">
+            <p>At ABC Seeds, we are dedicated to providing the best seeds and farming support to farmers globally. Our
+                vision is to empower farmers with top-quality products and reliable service. We offer:</p>
+            <ul>
+                <li>High-quality seeds sourced from trusted suppliers.</li>
+                <li>Expert advice and support available 24/7.</li>
+                <li>Global reach with a presence in multiple countries.</li>
+            </ul>
+        </div>
+    </div>
+    </header>
+    
+    <!-- product name -->
+    <div class="styled-products-container">
+        <div class="styled-product-card" *ngFor="let seed of seeds">
+            <div class="styled-card-content">
+                <h3>{{ seed.title }}</h3>
+                <p>{{ seed.description }}</p>
+                <div class="styled-hover-line"></div>
+            </div>
+        </div>
+    </div>
+    <!-- products-page.component.html -->
+  <!-- progress-section.component.html -->
+<div class="progress-section">
+    <div class="left-content">
+      <h2>Why Choose Our Products?</h2>
+      <p>
+        At ABC Seeds, we are committed to excellence. Our products stand out due to their quality and the values we uphold. Learn more about our core principles:
+      </p>
+      <!-- <div class="image">
+        <img src="/assets/images/business-idea-concept-development-process-innovation-product-and-creative-idea-flat-modern-illustration-vector.jpg" alt="Agriculture Image">
+      </div> -->
+    </div>
+  
+    <div class="right-content">
+      <div class="parameters">
+        <div class="parameter">
+          <h3>Trustworthy</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 90%;"></div>
+            <span class="percentage">90%</span>
+          </div>
+        </div>
+        <div class="parameter">
+          <h3>Sustainable</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 80%;"></div>
+            <span class="percentage">80%</span>
+          </div>
+        </div>
+        <div class="parameter">
+          <h3>Innovative</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 85%;"></div>
+            <span class="percentage">85%</span>
+          </div>
+        </div>
+        <div class="parameter">
+          <h3>High Quality</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 95%;"></div>
+            <span class="percentage">95%</span>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+ <!-- tertimonial -->
+   <div class="testimonial-section container my-5">
+        <div class="row align-items-center">
+            <!-- Left Side Heading -->
+            <div class="col-md-4 content">
+                <h2>What Happy Customers Say</h2>
+            </div>
+
+            <!-- Right Side Testimonials -->
+            <div class="col-md-8 testimonials">
+                <div class="testimonial-card" *ngFor="let testimonial of displayedTestimonials">
+                    <div class="stars">
+                        <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
+                    </div>
+                    <p class="message">{{ testimonial.message }}</p>
+                    <h4 class="name">- {{ testimonial.name }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
