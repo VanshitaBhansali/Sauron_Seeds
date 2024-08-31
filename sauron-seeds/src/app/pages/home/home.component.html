@@ -1,77 +1,88 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><div class="hero">
-    <div class="container">
-        <h1>Welcome To My Website</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, consequuntur?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis necessitatibus asperiores perferendis amet,
-            blanditiis velit beatae inventore explicabo repudiandae distinctio. </p>
-    </div>
-</div>
-<!-- counter -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  
-<div class="stats-section container my-5">
-    <div class="row align-items-center">
-      <!-- Left Side Content -->
-      <div class="col-md-6 content">
-        <h2>Why Choose Us?</h2>
-        <p>
-          We are committed to providing the best seeds and farming support to farmers globally.
-          Our vision is to empower farmers with top-quality products and reliable service.
-        </p>
-        <ul>
-          <li>High-quality seeds sourced from trusted suppliers.</li>
-          <li>Expert advice and support available 24/7.</li>
-          <li>Global reach with presence in multiple countries.</li>
-        </ul>
+<div class="main">
+
+<div class="hero">
+  <div class="container">
+      <div class="content">
+          <h1>Welcome To My Website</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, consequuntur?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis necessitatibus asperiores perferendis amet,
+              blanditiis velit beatae inventore explicabo repudiandae distinctio.</p>
       </div>
-  
-      <!-- Right Side Counters -->
-      <div class="col-md-6 counters">
-        <div class="row">
-          <div class="col-sm-6 counter-box">
-            <div class="counter-icon">
-              <i class="fas fa-tractor"></i>
-            </div>
-            <h3>
-              <!-- <count-up [endVal]="trustedFarmers"></count-up>+ -->
-            </h3>
-            <p>Trusted Farmers</p>
+      <div class="image">
+        <img src="/assets/images/agriculture-8030878_1280.png" alt="Agriculture Image">
+      </div>
+  </div>
+</div>
+
+<!-- counter -->
+<!-- stats.component.html -->
+<!-- stats-section.component.html -->
+<div class="stats-section container my-5">
+  <div class="row align-items-center">
+    <!-- Left Side Content -->
+    <div class="col-md-6 content">
+      <h2>Why Choose Us?</h2>
+      <p>
+        We are committed to providing the best seeds and farming support to farmers globally.
+        Our vision is to empower farmers with top-quality products and reliable service.
+      </p>
+      <ul>
+        <li>High-quality seeds sourced from trusted suppliers.</li>
+        <li>Expert advice and support available 24/7.</li>
+        <li>Global reach with presence in multiple countries.</li>
+      </ul>
+    </div>
+
+    <!-- Right Side Counters -->
+    <div class="col-md-6 counters">
+      <div class="row">
+        <div class="col-sm-6 counter-box">
+          <div class="counter-icon">
+            <i class="fas fa-tractor"></i>
           </div>
-  
-          <div class="col-sm-6 counter-box">
-            <div class="counter-icon">
-              <i class="fas fa-thumbs-up"></i>
-            </div>
-            <h3>
-              <!-- <count-up [endVal]="positiveFeedback"></count-up>% -->
-            </h3>
-            <p>Positive Feedback</p>
+          <h3>
+            <span [countUp]="trustedFarmers"></span>+
+          </h3>
+          <p>Trusted Farmers</p>
+        </div>
+
+        <div class="col-sm-6 counter-box">
+          <div class="counter-icon">
+            <i class="fas fa-thumbs-up"></i>
           </div>
-  
-          <div class="col-sm-6 counter-box">
-            <div class="counter-icon">
-              <i class="fas fa-globe"></i>
-            </div>
-            <h3>
-              <!-- <count-up [endVal]="presenceCountries"></count-up> -->
-            </h3>
-            <p>Presence in Countries</p>
+          <h3>
+            <span [countUp]="positiveFeedback"></span>%
+          </h3>
+          <p>Positive Feedback</p>
+        </div>
+
+        <div class="col-sm-6 counter-box">
+          <div class="counter-icon">
+            <i class="fas fa-globe"></i>
           </div>
-  
-          <div class="col-sm-6 counter-box">
-            <div class="counter-icon">
-              <i class="fas fa-seedling"></i>
-            </div>
-            <h3>
-              <!-- <count-up [endVal]="uniqueProducts"></count-up> -->
-            </h3>
-            <p>Unique Products</p>
+          <h3>
+            <span [countUp]="presenceCountries"></span>
+          </h3>
+          <p>Presence in Countries</p>
+        </div>
+
+        <div class="col-sm-6 counter-box">
+          <div class="counter-icon">
+            <i class="fas fa-seedling"></i>
           </div>
+          <h3>
+            <span [countUp]="uniqueProducts"></span>
+          </h3>
+          <p>Unique Products</p>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
+
+
   
 <!-- why chose us -->
 <div class="why-choose-us-container">
@@ -100,30 +111,32 @@
         </div>
     </div>
 </div>
-<!-- testimonials -->
 <div class="testimonial-section container my-5">
-    <div class="row align-items-center">
-      <!-- Left Side Heading -->
-      <div class="col-md-4 content">
-        <h2>What Happy Customers Say</h2>
-      </div>
-  
-      <!-- Right Side Testimonials -->
-      <div class="col-md-8 testimonials">
-        <div class="testimonial-card" *ngFor="let testimonial of displayedTestimonials">
-          <div class="stars">
-            <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
-          </div>
-          <p class="message">{{ testimonial.message }}</p>
-          <h4 class="name">- {{ testimonial.name }}</h4>
+  <div class="row align-items-center">
+    <!-- Left Side Heading -->
+    <div class="col-md-4 content">
+      <h2>What Happy Customers Say</h2>
+    </div>
+
+    <!-- Right Side Testimonials -->
+    <div class="col-md-8 testimonials">
+      <div class="testimonial-card" *ngFor="let testimonial of displayedTestimonials">
+        <div class="stars">
+          <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
         </div>
-  
-        <!-- Button to Change Testimonials -->
-        <button class="btn btn-primary mt-3" (click)="nextTestimonial()">Next</button>
+        <p class="message">{{ testimonial.message }}</p>
+        <h4 class="name">- {{ testimonial.name }}</h4>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation-buttons mt-3">
+        <button class="btn btn-primary me-2" (click)="previousTestimonial()">Previous</button>
+        <button class="btn btn-primary" (click)="nextTestimonial()">Next</button>
       </div>
     </div>
   </div>
-  
+</div>
+
 <!-- /***footer***/ -->
 <footer class="bg-dark text-white py-5">
     <div class="container">
@@ -166,4 +179,4 @@
       </div>
     </div>
   </footer>
-  
+</div>
