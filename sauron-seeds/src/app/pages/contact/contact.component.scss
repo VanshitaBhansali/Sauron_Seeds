@@ -1,54 +1,53 @@
-.contact-us {
-    .form-group {
-      margin-bottom: 1.5rem;
-  
-      label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-      }
-  
-      input {
-        width: 100%;
-        padding: 0.75rem;
-        border-radius: 0.25rem;
-        border: 1px solid #ced4da;
-      }
-    }
-  
-    .btn {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.25rem;
-      cursor: pointer;
-  
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  
-    .help-box {
-      background-color: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 0.25rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-      p {
-        margin-bottom: 1rem;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-  
-        li {
-          margin-bottom: 0.5rem;
-          font-size: 1.1rem;
-          color: #343a40;
-        }
-      }
-    }
+// Define color variables
+$primary-color: #f68822;
+$card-bg: #fff;
+$card-border: #ddd;
+$hover-bg: #f8f9fa;
+$shadow-color: rgba(0, 0, 0, 0.2);
+
+// Keyframes for animation
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px $shadow-color;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+
+  &-body {
+    padding: 1.25rem;
+  }
+
+  &-title {
+    font-size: 1.25rem;
+    color: $primary-color;
+  }
+
+  &-text {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px $shadow-color;
+    background-color: $hover-bg;
+  }
+
+  // Responsive padding for small devices
+  @media (max-width: 576px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,70 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @fortawesome/angular-fontawesome
+
+PATH: 
+  C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\app\Dell\product\18.0.0\dbhomeXE\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-17.0.2;C:\Program Files\dotnet\;C:\MinGW\bin;C:\MinGW\bin\g++.exe;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Program Files\MongoDB\Server\6.0\bin;C:\mongosh-1.10.0-win32-x64\mongosh-1.10.0-win32-x64\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\MongoDB\Server\6.0\bin;C:\mongosh-1.10.0-win32-x64\mongosh-1.10.0-win32-x64\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\Dell\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-17.0.2\bin;;C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dell\AppData\Local\Yarn\bin;C:\Users\Dell\.dotnet\tools;C:\Users\Dell\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'E:\Sauron_Seeds\sauron-seeds\node_modules\@msgpackr-extract\msgpackr-extract-win32-x64\node.abi115.node'
+
+npm manifest: 
+  {
+    "name": "sauron-seeds",
+    "version": "0.0.0",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "watch": "ng build --watch --configuration development",
+      "test": "ng test"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^18.1.0",
+      "@angular/common": "^18.1.0",
+      "@angular/compiler": "^18.1.0",
+      "@angular/core": "^18.1.0",
+      "@angular/forms": "^18.1.0",
+      "@angular/platform-browser": "^18.1.0",
+      "@angular/platform-browser-dynamic": "^18.1.0",
+      "@angular/router": "^18.1.0",
+      "@fortawesome/angular-fontawesome": "^0.15.0",
+      "@fortawesome/fontawesome-svg-core": "^6.6.0",
+      "@fortawesome/free-brands-svg-icons": "^6.6.0",
+      "@fortawesome/free-regular-svg-icons": "^6.6.0",
+      "@fortawesome/free-solid-svg-icons": "^6.6.0",
+      "bootstrap": "^5.3.3",
+      "ngx-countup": "^13.2.0",
+      "rxjs": "~7.8.0",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.14.3"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "^18.1.4",
+      "@angular/cli": "^18.1.4",
+      "@angular/compiler-cli": "^18.1.0",
+      "@types/jasmine": "~5.1.0",
+      "jasmine-core": "~5.1.0",
+      "karma": "~6.4.0",
+      "karma-chrome-launcher": "~3.2.0",
+      "karma-coverage": "~2.2.0",
+      "karma-jasmine": "~5.1.0",
+      "karma-jasmine-html-reporter": "~2.1.0",
+      "typescript": "~5.5.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
