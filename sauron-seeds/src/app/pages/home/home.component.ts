@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CountUpModule } from 'ngx-countup';
+import { FooterComponent } from '../../Layout/footer/footer/footer.component';
+
 interface Testimonial {
   name: string;
   message: string;
@@ -10,7 +12,7 @@ interface Testimonial {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CountUpModule,CommonModule],
+  imports: [CountUpModule,CommonModule,BrowserModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -43,9 +45,13 @@ export class HomeComponent {
       rating: 3
     }
   ];
+  activeIndex = 0;
   currentIndex: number = 0;
   displayedTestimonials: Testimonial[] = [this.testimonials[this.currentIndex]];
 
+  showNextTestimonial(index: number): void {
+    this.activeIndex = (index + 1) % this.testimonials.length;
+  }
   nextTestimonial() {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];

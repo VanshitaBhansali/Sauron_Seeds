@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, Input, ViewChild } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,AppComponent],
+  imports: [CommonModule,AppComponent,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

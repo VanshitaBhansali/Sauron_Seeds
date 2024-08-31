@@ -1,0 +1,49 @@
+  /****footer***/
+  /* Footer Styles */
+  .footer {
+    background-color: black; // Using Bootstrap's variable for dark color
+    color: white; // Using Bootstrap's variable for white color
+    padding: 3rem 0;
+  
+    h5 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+  
+    ul {
+      padding: 0;
+      list-style: none;
+  
+      li {
+        margin-bottom: 0.5rem;
+  
+        a {
+          text-decoration: none;
+          color: white;
+          transition: color 0.3s;
+  
+          &:hover {
+            // color: $primary; // Using Bootstrap's primary color variable
+color: #4caf50;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  
+    a {
+      text-decoration: none;
+      color: white;
+  
+      &:hover {
+        // color: $primary; // Using Bootstrap's primary color variable
+
+        color: #4caf50;
+    }
+    }
+  }
