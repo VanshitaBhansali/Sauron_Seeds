@@ -1,5 +1,4 @@
 .main{
-  background-color:#f9f4ed;
   .text-right {
     text-align: right;
   }
@@ -8,8 +7,19 @@
     text-align: left;
   }
 }
+.hero2{
+  height: 100vh;
+  color: #150000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
+  overflow: hidden; /* Ensures children don't overflow */
+  padding: 20px;
+}
 .hero {
-  background-color:#f9f4ed;
+  background: linear-gradient(180deg, #C2FBFF 0%, #f6f8f8 93.47%);
   height: 100vh;
   color: #150000;
   display: flex;
@@ -33,18 +43,6 @@
 }
 
 
-// .main-container {
-//   background-image: url('/assets/images/background.png');
-//   background-size: cover; /* Ensure the background image covers the entire container */
-//   background-position: center; /* Center the background image */
-//   background-repeat: no-repeat; /* Prevent the image from repeating */
-//   height: 100vh; /* Example: Make the container full height of the viewport */
-//   .image{
-//     opacity: 0.00001%;
-//     z-index: -1;
-//   }
-// }
-
 .container {
   max-width: 1200px;
   display: flex;
@@ -59,7 +57,7 @@
   opacity: 0;
   transform: translateY(50px); /* Start position */
   animation: slideUp 1s ease-out forwards 0.5s; /* Added delay for a smooth effect */
-  color: #995333;
+  color:var(--dark-text); ;
   
   h1 {
     font-size: 46px;
@@ -148,7 +146,7 @@
   .box {
     padding: 20px 0px;
     border-radius: 8px;
-    color: #c47a26;
+    color: var(--primary-color);;
     // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
   }
@@ -156,19 +154,7 @@
   .box:hover {
     transform: translateY(-5px);
   }
-  
-  .vision {
-    background-color: #4caf50; /* Green */
-  }
-  
-  .mission {
-    background-color: #2196f3; /* Blue */
-  }
-  
-  .values {
-    background-color: #ff9800; /* Orange */
-  }
-  
+    
   .box h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
@@ -189,14 +175,14 @@
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #995333;
+      color: var(--dark-text);;
     }
 
     p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
-      color: #995333;
+      color: var(--dark-text);;
     }
 
     ul {
@@ -225,8 +211,9 @@
     flex-wrap: wrap;
     gap: 20px;
 
+
     .counter-box {
-      background: #f8f9fa;
+      background-color: var(--secondary-color);
       padding: 20px;
       border-radius: 8px;
       text-align: center;
@@ -236,7 +223,8 @@
 
       .counter-icon {
         font-size: 2rem;
-        color: #28a745;
+        
+        color: var(--dark-text);;
         margin-bottom: 10px;
         animation: icon-bounce 1.5s infinite;
       }

@@ -1,7 +1,13 @@
 /*===========================
 		COMMON css
 ===========================*/
-@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+$primary-color:#37C2CC;
+$dark-text:rgba(0, 0, 0, 0.7);
+$light-text:rgba(0, 0, 0, 0.6);
+$primary-content:#C2FBFF;@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+
+
+
 html {
   scroll-behavior: smooth;
 }

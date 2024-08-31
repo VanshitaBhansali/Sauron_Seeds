@@ -25,7 +25,7 @@
     <div class="row align-items-center">
       <!-- Left Side Content -->
       <div class="col-md-6 content">
-        <h2>Why Choose Us?</h2>
+        <h2>About Us</h2>
         <p>
           We are committed to providing the best seeds and farming support to farmers globally.
           Our vision is to empower farmers with top-quality products and reliable service.
@@ -40,7 +40,7 @@
       <!-- Right Side Counters -->
       <div class="col-md-6 counters">
         <div class="row">
-          <div class="col-sm-6 counter-box">
+          <div class="col-sm-4 counter-box">
             <div class="counter-icon">
               <i class="fas fa-tractor"></i>
             </div>
@@ -50,7 +50,7 @@
             <p>Trusted Farmers</p>
           </div>
 
-          <div class="col-sm-6 counter-box">
+          <div class="col-sm-4 counter-box ">
             <div class="counter-icon">
               <i class="fas fa-thumbs-up"></i>
             </div>
@@ -60,7 +60,7 @@
             <p>Positive Feedback</p>
           </div>
 
-          <div class="col-sm-6 counter-box">
+          <div class="col-sm-4 counter-box">
             <div class="counter-icon">
               <i class="fas fa-globe"></i>
             </div>
@@ -70,7 +70,7 @@
             <p>Presence in Countries</p>
           </div>
 
-          <div class="col-sm-6 counter-box">
+          <div class="col-sm-4  counter-box">
             <div class="counter-icon">
               <i class="fas fa-seedling"></i>
             </div>
@@ -87,33 +87,9 @@
 
 
   <!-- why chose us -->
-
-  <!-- <div class="why-choose-us-container"> -->
-  <!-- Left Side: Content Section -->
-  <!-- <div class="left-content d-flex align-items-center"> -->
-  <!-- <h2>Why Choose Us?</h2> -->
-  <!-- <p>We provide high-quality seeds that ensure the best yield for your farms. Our products are carefully selected,
-            tested, and optimized for different soil and climate conditions.</p>
-        <p>Our team of experts is dedicated to supporting farmers with reliable and sustainable solutions. We believe in
-            empowering agriculture with innovation, quality, and trust.</p> -->
-  <!-- </div> -->
-
   <!-- Right Side: Stylish Rectangular Boxes -->
-  <!-- <div class="right-boxes">
-        <div class="box vision">
-            <h3>Vision</h3>
-            <p>To be the leading provider of sustainable agricultural solutions worldwide.</p>
-        </div>
-        <div class="box mission">
-            <h3>Mission</h3>
-            <p>To deliver the highest quality seeds and services that empower farmers and enhance food security.</p>
-        </div>
-        <div class="box values">
-            <h3>Values</h3>
-            <p>Integrity, Innovation, Sustainability, and Customer Satisfaction are at the core of everything we do.</p>
-        </div>
-    </div> -->
-  <div class="why-choose-us-container container hero">
+ 
+  <div class="why-choose-us-container container ">
     <div class="row">
       <!-- Left Side: Two Boxes -->
       <div class="col-md-4">
@@ -155,41 +131,12 @@
 
   <!-- </div> -->
 
-  <div class="testimonial-section container hero">
+  <div class="testimonial-section container hero2">
 
     <!-- Left Side Heading -->
     <div class="col-md-6">
       <h2>What Happy Customers Say</h2>
     </div>
-
-    <!-- Right Side Testimonials -->
-    <!-- <div class="col-md-8 testimonials">
-      <div class="testimonial-card" *ngFor="let testimonial of displayedTestimonials">
-        <div class="stars">
-          <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
-        </div>
-        <p class="message">{{ testimonial.message }}</p>
-        <h4 class="name">- {{ testimonial.name }}</h4>
-      </div> -->
-
-    <!-- Navigation Buttons -->
-    <!-- <div class="navigation-buttons mt-3">
-        <button class="btn btn-primary me-2" (click)="previousTestimonial()">Previous</button>
-        <button class="btn btn-primary" (click)="nextTestimonial()">Next</button>
-      </div> -->
-    <!-- </div> -->
-
-
-    <!-- <div class="testimonials-wrapper">
-        <div class="testimonial-card" *ngFor="let testimonial of displayedTestimonials">
-          <div class="stars">
-            <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
-          </div>
-          <p class="message">{{ testimonial.message }}</p>
-          <h4 class="name">- {{ testimonial.name }}</h4>
-        </div>
-      </div> -->
-
     <div class="testimonial-wrapper col-md-6">
       <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index"
         [class.active]="activeIndex === i" (click)="showNextTestimonial(i)">

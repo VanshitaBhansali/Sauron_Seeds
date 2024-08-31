@@ -12,7 +12,7 @@ interface Testimonial {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CountUpModule,CommonModule,BrowserModule],
+  imports: [CountUpModule,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
