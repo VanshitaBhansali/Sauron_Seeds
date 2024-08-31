@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './Layout/layout/layout.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { FooterComponent } from './Layout/footer/footer/footer.component';
@@ -14,4 +14,15 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'sauron-seeds';
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Scroll to top when navigating to a new route
+        window.scrollTo(0, 0);
+      }
+    });
+  }
+
 }

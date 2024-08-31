@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   overflow: hidden; /* Ensures children don't overflow */
   padding: 20px;
   
@@ -70,6 +70,43 @@
     letter-spacing: 1px;
     margin-bottom: 1rem;
   }
+
+
+}
+/* src/styles/custom-button.scss */
+/* src/styles/global.css */
+
+.btn-custom {
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color:#995333;/* Darker color for active */
+  color: #fffafa; /* Text color */
+}
+
+.btn-custom:hover {
+  background-color: #c5a58c;
+  color: white; /* Darkened color for hover */
+  transform: scale(1.05);
+}
+
+.btn-custom:active {
+  background-color:#995333;/* Darker color for active */
+  transform: scale(0.95);
+}
+
+.btn-custom:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 
 .image {
@@ -78,14 +115,22 @@
   justify-content: flex-end;
   opacity: 0; /* Start invisible */
   animation: fadeIn 1s ease-out forwards 1s; /* Animation with a delay */
-  
+
   img {
-    width: 100%;
-    max-width: 500px; /* Adjust as needed */
-    border-radius: 10px;
+    border-radius: 15%;    
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  /* Hover effect */
+  &:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow for a pop-out effect */
   }
 }
+
+/* src/styles/custom-button.scss */
+
 
 @keyframes slideUp {
   0% {
@@ -198,7 +243,7 @@
 
         &:before {
           content: '\2022';
-          color: #28a745;
+          color:var(--background-color) !important;
           position: absolute;
           left: 0;
         }
@@ -252,11 +297,11 @@
     }
   }
   
-  /* Animation when in view */
-  .content.in-view {
-    opacity: 1;
-    transform: translateX(0); /* Final position */
-  }
+  // /* Animation when in view */
+  // .content.in-view {
+  //   opacity: 1;
+  //   transform: translateX(0); /* Final position */
+  // }
 }
 
 
@@ -386,7 +431,11 @@
     overflow: hidden;
     height: 300px; /* Set height for the container */
   }
-  
+  .testimonial-section
+  {
+    height:80% !important;
+    padding-bottom: 200px;
+  }
   .testimonial-wrapper {
     display: flex;
     flex-direction: column;
@@ -403,7 +452,7 @@
     top: 0;
     left: 50%;
     width: 50%;
-    height: 100%;
+    height: 80% !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
