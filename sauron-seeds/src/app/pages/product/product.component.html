@@ -30,11 +30,14 @@
     </header>
     
     <!-- product name -->
-    <div class="styled-products-container">
-        <div class="styled-product-card" *ngFor="let seed of seeds">
+    <div class="styled-products-container" *ngIf="productPost$ |async as productPosts">
+        <!-- <pre>
+            {{productPosts | json}}
+        </pre> -->
+        <div class="styled-product-card" *ngFor="let productpost of productPosts">
             <div class="styled-card-content">
-                <h3>{{ seed.title }}</h3>
-                <p>{{ seed.description }}</p>
+                <h3>{{ productpost.fields.title }}</h3>
+                <p>{{productpost.fields.description}}</p>
                 <div class="styled-hover-line"></div>
             </div>
         </div>

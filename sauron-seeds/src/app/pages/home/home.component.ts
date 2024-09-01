@@ -3,6 +3,8 @@ import { Component, Directive, ElementRef, Renderer2, ViewChild } from '@angular
 import { BrowserModule } from '@angular/platform-browser';
 import { CountUpModule } from 'ngx-countup';
 import { FooterComponent } from '../../Layout/footer/footer/footer.component';
+import { ContentfulService } from '../../services/contentful.service';
+import { map, Observable } from 'rxjs';
 
 interface Testimonial {
   name: string;
@@ -19,7 +21,7 @@ interface Testimonial {
 
 
 export class HomeComponent {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2, private  contentfulService:ContentfulService) {}
 
   trustedFarmers: number = 1500;
   positiveFeedback: number = 98;
@@ -64,6 +66,18 @@ export class HomeComponent {
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];
   }
   @ViewChild('content') content!: ElementRef;
+  statesData$:Observable<any> | undefined;
+  ngOnInit():void{
+  //  this.productPost$= this.contentfulService.getAllEntries({ content_type: 'productPost'}).pipe(
+  //   map((response: any) => response.items) // Map the response to get only the items array
+  // );;
+  this.statesData$ = this.contentfulService.getAllEntries({
+    content_type: 'statesData', 
+  }).pipe(
+    map((response: any) => response.items) // Map the response to get only the items array
+  );
+  
+  }
   ngAfterViewInit() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
