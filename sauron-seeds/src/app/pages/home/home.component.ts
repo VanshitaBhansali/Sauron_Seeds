@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, Directive, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CountUpModule } from 'ngx-countup';
 import { FooterComponent } from '../../Layout/footer/footer/footer.component';
@@ -19,6 +19,8 @@ interface Testimonial {
 
 
 export class HomeComponent {
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
   trustedFarmers: number = 1500;
   positiveFeedback: number = 98;
   presenceCountries: number = 25;
@@ -62,8 +64,23 @@ export class HomeComponent {
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];
   }
   @ViewChild('content') content!: ElementRef;
-  constructor() {}
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log(entry?.target);
+    
+          (entry.target as HTMLElement).classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1 // Adjust based on when you want the animation to trigger
+    });
 
-  ngOnInit(): void {
+    const sectionContent = document.querySelector('.stats-section .stats-section-content');
+    if (sectionContent) {
+      observer.observe(sectionContent);
+    }
   }
 }

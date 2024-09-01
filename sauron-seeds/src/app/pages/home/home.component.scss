@@ -58,7 +58,10 @@
   transform: translateY(50px); /* Start position */
   animation: slideUp 1s ease-out forwards 0.5s; /* Added delay for a smooth effect */
   color:var(--dark-text); ;
-  
+  .animate-in {
+    opacity: 1; /* Final state */
+    transform: translateX(0); /* Move to original position */
+  }
   h1 {
     font-size: 46px;
     margin: -20px 0 20px;
@@ -74,7 +77,6 @@
 
 }
 /* src/styles/custom-button.scss */
-/* src/styles/global.css */
 
 .btn-custom {
   border-radius: 5px;
@@ -127,9 +129,13 @@
     transform: scale(1.1); /* Slightly enlarge the image */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow for a pop-out effect */
   }
+  @media (width:375px) {
+    height:100% !important;
+    width:100% !important;
+    
+  }
 }
 
-/* src/styles/custom-button.scss */
 
 
 @keyframes slideUp {
@@ -153,8 +159,21 @@
     transform: scale(1); /* Normal scale */
   }
 }
+/****stats section***/
 
 
+.stats-section-content {
+  flex: 1;
+  padding: 20px;
+  opacity: 0;
+  color: var(--dark-text);
+  animation: 0;
+}
+
+::ng-deep .stats-section-content.animate-in {
+  animation: slideUp 3s ease-out forwards;
+
+}
   /***why chose us***/
   .why-choose-us-container {
     // display: flex;
@@ -216,7 +235,7 @@
     opacity: 0; /* Initially hidden */
     transform: translateX(-50px); /* Start position */
     transition: opacity 1s ease-out, transform 1s ease-out; /* Transition for the animation */
-    
+   
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -249,6 +268,10 @@
         }
       }
     }
+  }
+  .content.animate-in {
+    opacity: 1 !important; /* Final state */
+    transform: translateX(0) !important; /* Move to original position */
   }
 
   .counters {
