@@ -21,7 +21,7 @@ interface Testimonial {
 
 
 export class HomeComponent {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2,private contentfulService:ContentfulService) {}
 
   trustedFarmers: number = 1500;
   positiveFeedback: number = 98;
