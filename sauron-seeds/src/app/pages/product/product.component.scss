@@ -1,8 +1,7 @@
 /**main hero**/
 .product-page-container {
-    padding: 20px;
+    padding: 60px 0;
     text-align: center;
-    
 
     .header {
         margin-bottom: 40px;
@@ -20,6 +19,7 @@
 
         .company-info {
             margin-top: 30px;
+            text-align:justify ;
 
             h2 {
                 font-size: 2rem;
@@ -296,17 +296,7 @@
 
 /***product name**/
 /* product-page.component.scss */
-
-.styled-products-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
 .styled-product-card {
-    flex: 1 1 22%;
     background: #fff;
     padding: 20px;
     border-radius: 20px;
@@ -343,20 +333,17 @@
 
         .styled-hover-line {
             width: 0;
-            /* Line is initially hidden */
             height: 3px;
             background: linear-gradient(to right, #28a745, #85d744);
             position: absolute;
             bottom: 0;
             left: 0;
             transition: width 0.4s ease-in-out;
-            /* Smooth transition for the line */
         }
     }
 
     &:hover .styled-hover-line {
         width: 100% !important;
-        /* Line expands to full width on hover */
     }
 
     &:before,
@@ -380,7 +367,6 @@
         right: -20px;
     }
 }
-
 
 /***testimonial***/
 

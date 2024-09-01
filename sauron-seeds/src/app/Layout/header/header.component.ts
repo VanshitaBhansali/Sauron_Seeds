@@ -92,5 +92,11 @@ export class HeaderComponent {
   // get isTogglerActive() {
   //   return this.toggler;
   // }
-
+  toggleSidebar() {
+    // Emit an event to toggle the sidebar
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) {
+      sidebar.classList.toggle('show');
+    }
+  }
 }
