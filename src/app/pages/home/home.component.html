@@ -6,7 +6,7 @@
   <div class="hero main-container">
     <div class="container-fluid d-flex row">
 
-      <div class="image ms-0 col-md-12 col-lg-6 col-sm-12 d-none d-lg-block">
+      <div class="image ms-0 col-md-12 col-lg-6 col-sm-12">
         <img src="/assets/images/indian-farmer-using-drone-spraying-600nw-2116655078.png" alt="Agriculture Image">
       </div>
       <div class="content col-md-12 col-lg-6 col-sm-12">
@@ -22,7 +22,7 @@
   <!-- counter -->
   <!-- stats.component.html -->
   <!-- stats-section.component.html -->
-  <div class="stats-section container my-5">
+  <div class="stats-section container my-5" >
     <div class="row align-items-center">
       <!-- Left Side Content -->
       <div class="col-md-6 stats-section-content">
@@ -41,7 +41,7 @@
       <!-- Right Side Counters -->
       <div class="col-md-6 counters">
         <div class="row">
-          <div class="col-sm-6 counter-box">
+          <div class="col-sm-4 counter-box">
             <div class="counter-icon">
               <i class="fas fa-tractor"></i>
             </div>
@@ -51,7 +51,7 @@
             <p>Trusted Farmers</p>
           </div>
 
-          <div class="col-sm-6 counter-box ">
+          <div class="col-sm-4 counter-box ">
             <div class="counter-icon">
               <i class="fas fa-thumbs-up"></i>
             </div>
@@ -61,7 +61,7 @@
             <p>Positive Feedback</p>
           </div>
 
-          <div class="col-sm-6 counter-box">
+          <div class="col-sm-4 counter-box">
             <div class="counter-icon">
               <i class="fas fa-globe"></i>
             </div>
@@ -71,7 +71,7 @@
             <p>Presence in Countries</p>
           </div>
 
-          <div class="col-sm-6  counter-box">
+          <div class="col-sm-4  counter-box">
             <div class="counter-icon">
               <i class="fas fa-seedling"></i>
             </div>
@@ -82,24 +82,14 @@
           </div>
         </div>
       </div>
-      <!-- <div  class="col-md-6 counters" *ngIf="statesData$ |async as statesData">
-    
-      <div *ngFor="let states of statesData">
-        <div class="counter-icon">
-            <h3>{{ states.fields.title }}</h3>
-            <p>{{states.fields.number}}</p>
-            <div class="styled-hover-line"></div>
-        </div>
-    </div> -->
     </div>
   </div>
-</div>
 
 
 
   <!-- why chose us -->
   <!-- Right Side: Stylish Rectangular Boxes -->
-
+ 
   <div class="why-choose-us-container container ">
     <div class="row">
       <!-- Left Side: Two Boxes -->
@@ -118,46 +108,46 @@
 
       <!-- Middle: Image Box -->
       <div class="col-md-4 d-flex align-items-center justify-content-center">
-        <img src="/assets/images/why-choose-us-symbol-text-260nw-2396164945-removebg-preview.png"
-          alt="Description of Image" class="img-fluid d-none d-lg-block">
-     
+        <div class="image-box  ">
+          <img src="/assets/images/why-choose-us-symbol-text-260nw-2396164945-removebg-preview.png"
+            alt="Description of Image" class="img-fluid">
+        </div>
       </div>
+
       <!-- Right Side: Two Boxes -->
       <div class="col-md-4">
 
-      <div class="box text-left">
-        <h3><i class="fa fa-lightbulb" aria-hidden="true"></i> Innovation</h3>
-        <p>We are constantly innovating to provide more value to our customers and partners. Stay tuned for exciting
-          updates and opportunities to grow with us.</p>
-      </div>
-      <div class="box text-left">
-        <h3><i class="fas fa-star fa-sm"></i>Values</h3>
-        <p>Integrity, Innovation, Sustainability and Customer Satisfaction are at the core of everything we do.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- </div> -->
-
-  <div class="testimonial-section container hero2">
-    <div class="row">
-      <!-- Left Side Heading -->
-      <div class="col-lg-6 ">
-        <h2>What Happy Customers Say</h2>
-        <p class="">From beginners to experienced growers, ABC Seeds offers something for everyone. The seeds are
-          high-quality, easy to grow, and produce beautiful, healthy plants. I recommend them to anyone looking to start
-          or expand their garden</p>
-      </div>
-      <div class="testimonial-wrapper col-lg-6">
-        <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index"
-          [class.active]="activeIndex === i" (click)="showNextTestimonial(i)">
-          <div class="stars">
-            <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
-          </div>
-          <p class="message">{{ testimonial.message }}</p>
-          <h4 class="name">- {{ testimonial.name }}</h4>
+        <div class="box text-left">
+          <h3><i class="fa fa-lightbulb" aria-hidden="true"></i> Innovation</h3>
+          <p>We are constantly innovating to provide more value to our customers and partners. Stay tuned for exciting
+            updates and opportunities to grow with us.</p>
+        </div>
+        <div class="box text-left">
+          <h3><i class="fas fa-star fa-sm"></i>Values</h3>
+          <p>Integrity, Innovation, Sustainability and Customer Satisfaction are at the core of everything we do.</p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- </div> -->
+
+  <div class="testimonial-section container hero2">
+
+    <!-- Left Side Heading -->
+    <div class="col-md-6">
+      <h2>What Happy Customers Say</h2>
+      <p class="">From beginners to experienced growers, ABC Seeds offers something for everyone. The seeds are high-quality, easy to grow, and produce beautiful, healthy plants. I recommend them to anyone looking to start or expand their garden</p>
+    </div>
+    <div class="testimonial-wrapper col-md-6">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index"
+        [class.active]="activeIndex === i" (click)="showNextTestimonial(i)">
+        <div class="stars">
+          <i class="fas fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></i>
+        </div>
+        <p class="message">{{ testimonial.message }}</p>
+        <h4 class="name">- {{ testimonial.name }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
