@@ -1,9 +1,5 @@
 // Define color variables
-$primary-color: #f68822;
-$card-bg: #fff;
-$card-border: #ddd;
-$hover-bg: #f8f9fa;
-$shadow-color: rgba(0, 0, 0, 0.2);
+
 
 // Keyframes for animation
 @keyframes slideIn {
@@ -18,10 +14,10 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  background-color: $card-bg;
-  border: 1px solid $card-border;
+  background-color: white;
+  border: 1px solid var(--light-1);
   border-radius: 0.25rem;
-  box-shadow: 0 4px 8px $shadow-color;
+  box-shadow: 0 4px 8px var(--dark-3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideIn 0.5s ease-out;
 
@@ -31,7 +27,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
   &-title {
     font-size: 1.25rem;
-    color: $primary-color;
+    color: var(--light-3)
   }
 
   &-text {
@@ -41,8 +37,8 @@ $shadow-color: rgba(0, 0, 0, 0.2);
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px $shadow-color;
-    background-color: $hover-bg;
+    box-shadow: 0 8px 16px var(--dark-3);
+    background-color: var(--light-0);
   }
 
   // Responsive padding for small devices

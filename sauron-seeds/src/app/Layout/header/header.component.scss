@@ -1,4 +1,23 @@
 .nav-header
 {
-    background-color:var(--primary-color) !important;
+    background-color:var(--dark-2) !important;
+}
+.icon
+{
+    color: var(--light-0) !important;
+
+}
+.nav-link {
+    color: var(--light-0) !important;
+    font-weight: normal;
+    font-size: 1.3rem;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--light-0) !important; 
+}
+
+.nav-link.active {
+    color: var(--light-4) !important; 
 }

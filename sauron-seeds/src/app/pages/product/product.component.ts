@@ -68,17 +68,21 @@ export class ProductComponent {
   ];
   trustedFarmers: number = 1500;
 
+  activeIndex: number = 0;
   currentIndex: number = 0;
+
   displayedTestimonials: Testimonial[] = [this.testimonials[this.currentIndex]];
 
+  showNextTestimonial(index: number): void {
+    this.activeIndex = (index + 1) % this.testimonials.length;
+  }
   nextTestimonial() {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];
   }
 
   previousTestimonial() {
-    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+    this.activeIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
     this.displayedTestimonials = [this.testimonials[this.currentIndex]];
   }
- 
 }
