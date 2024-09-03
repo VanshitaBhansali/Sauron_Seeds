@@ -1,0 +1,395 @@
+.main{
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+}
+.hero2{
+  height: 100vh;
+  color: #150000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+   overflow: hidden; /* Ensures children don't overflow */
+  padding: 20px;
+}
+.hero {
+  background: linear-gradient(180deg, var(--light-2) 0%, var(--light-0) 93.47%);
+  height: 100vh;
+  color: #150000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensures children don't overflow */
+  padding: 20px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: -1; /* Positioned behind content */
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px); /* Start position */
+  animation: slideUp 1s ease-out forwards 0.5s; /* Smooth entry effect */
+  color: var(--dark-text);
+}
+
+.content h1 {
+  font-size: 46px;
+  margin: -20px 0 20px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color:var(--dark-2); /* Darker color for active */
+  color: #fffafa; /* Text color */
+}
+
+.btn-custom:hover {
+  background-color: var(--light-0); /* Darkened color for hover */
+  color: var(--dark-3);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn-custom:active {
+  background-color: #995333; /* Darker color for active */
+  transform: scale(0.95); /* Slightly shrink on active */
+}
+
+.btn-custom:disabled {
+  background-color: #ccc;
+  cursor: not-allowed; /* Show disabled state */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1s ease-out forwards 1s; /* Animation with a delay */
+}
+image img{
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  width: 120%; /* Increase width to make the image larger */
+  max-width: none; /* Prevent the image from shrinking */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image:hover img {
+  transform: scale(1.05); /* Enlarge the image slightly */
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack on smaller screens */
+  }
+
+  .image, .content {
+    max-width: 100%;
+    flex: 1; /* Full width on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 375px) {
+  .image {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Starting position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); /* Slight inward scaling for effect */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Normal scale */
+  }
+}
+/****stats section***/
+
+
+.stats-section-content {
+  flex: 1;
+  padding: 20px;
+  opacity: 0;
+  color: var(--dark-text);
+  animation: 0;
+}
+
+::ng-deep .stats-section-content.animate-in {
+  animation: slideUp 5s ease-out forwards;
+
+}
+  /***why chose us***/
+  .why-choose-us-container {
+    padding: 20px;
+    gap: 40px;
+  }
+  
+  .left-content, .right-content, .image-box img {
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* For left content */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .right-content {
+    transform: translateX(100px); /* For right content */
+  }
+  
+  .image-box img {
+    transform: scale(0.9); /* For image pop out */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-in-left {
+    opacity: 1;
+    transform: translateX(0); /* Slide in from left */
+  }
+  
+  .animate-in-right {
+    opacity: 1;
+    transform: translateX(0); /* Slide in from right */
+  }
+  
+  .animate-in-pop {
+    opacity: 1;
+    transform: scale(1); /* Pop out image */
+  }
+  
+  .box {
+    padding: 20px 0;
+    border-radius: 8px;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+  }
+  
+  .box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .box p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+ /***counter**/
+ /* stats.component.scss */
+.stats-section {
+  .content {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start position */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transition for the animation */
+   
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--dark-text);;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: var(--dark-text);;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 20px;
+
+        &:before {
+          content: '\2022';
+          color:var(--background-color) !important;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+  .content.animate-in {
+    opacity: 1 !important; /* Final state */
+    transform: translateX(0) !important; /* Move to original position */
+  }
+
+
+  .counters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    .counter-box {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1 1 45%;
+      margin-bottom: 20px;
+
+      .counter-icon {
+        font-size: 2rem;
+        
+        color: var(--dark-text);;
+        margin-bottom: 10px;
+        animation: icon-bounce 1.5s infinite;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+    .counter-box.animate-in {
+      opacity: 1 !important; /* Final state */
+      transform: translateX(0) !important; /* Move to original position */
+    }
+  }
+
+  @keyframes icon-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+ 
+}
+
+
+.testimonial-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Set height for the container */
+}
+
+.testimonial-section {
+  height: 80% !important;
+  padding-bottom: 200px;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute; /* Use absolute positioning to stack cards */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+}
+
+.testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 80% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  cursor: pointer;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-card:not(.active) {
+  opacity: 0;
+  transform: translateY(100%); /* Move cards out of view */
+}
+
+  
+
+  
+  

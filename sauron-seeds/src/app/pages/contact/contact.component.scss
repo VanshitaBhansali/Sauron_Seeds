@@ -1,0 +1,49 @@
+// Define color variables
+
+
+// Keyframes for animation
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: white;
+  border: 1px solid var(--light-1);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px var(--dark-3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+
+  &-body {
+    padding: 1.25rem;
+  }
+
+  &-title {
+    font-size: 1.25rem;
+    color: var(--light-3)
+  }
+
+  &-text {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--dark-3);
+    background-color: var(--light-0);
+  }
+
+  // Responsive padding for small devices
+  @media (max-width: 576px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

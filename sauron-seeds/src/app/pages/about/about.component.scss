@@ -1,0 +1,173 @@
+    /* About Us Section Styles */
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-text {
+        padding-right: 30px;
+    }
+
+    .about-text h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        color: #555;
+        text-align: justify;
+    }
+
+    .paragraph-section {
+        padding: 30px 0;
+        background-color: #ffffff; /* White background for contrast */
+        border-top: 1px solid #ddd;
+    }
+
+    .paragraph-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        text-align: justify;
+    }
+
+    
+/**count**/
+.card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color:var(--light-4);
+  }
+
+  /***commitment***/
+  .about-us-section {
+    padding: 20px;
+  
+    .commitment, .values {
+        
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 1rem;
+          padding-left: 20px;
+          font-size: 1.1rem;
+          color: #555;
+          position: relative;
+  
+          &:before {
+            // content: '✔';
+            color: #28a745;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+          }
+  
+          strong {
+            color: #333;
+          }
+        }
+      }
+    }
+  
+    .commitment {
+      border-right: 2px solid #e0e0e0;
+      padding-right: 30px;
+    }
+  
+    .values {
+      padding-left: 30px;
+    }
+  
+    @media (max-width: 768px) {
+      .commitment, .values {
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+  
+
+    /* Team Section Styles */
+    .team-section {
+        padding: 60px 0;
+        background-color: #f8f9fa; /* Light grey background */
+    }
+
+    .team-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .team-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .team-card:hover {
+        transform: translateY(-10px); /* Lift effect on hover */
+    }
+
+    .team-card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .team-card-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .team-card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .team-card-text {
+        color: #555;
+        font-size: 0.95rem;
+    }

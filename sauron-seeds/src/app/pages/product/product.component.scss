@@ -1,0 +1,291 @@
+/**main hero**/
+.product-page-container {
+    padding: 60px 0;
+    text-align: center;
+
+    .header {
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .company-info {
+            margin-top: 30px;
+            text-align: justify;
+
+            h2 {
+                font-size: 2rem;
+                color: #28a745;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    font-size: 1rem;
+                    color: #666;
+                    margin-bottom: 10px;
+                    position: relative;
+                    padding-left: 20px;
+
+                    &:before {
+                        content: '\2022';
+                        color: #28a745;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* progress-section.component.scss */
+.progress-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 30px;
+
+    .left-content {
+        flex: 1;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .image {
+            width: 10%;
+            height: 10%;
+        }
+    }
+
+    .right-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .parameters {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .parameter {
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+
+                h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.5rem;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: #666;
+                    margin-bottom: 1rem;
+                }
+
+                .progress-bar-container {
+                    position: relative;
+                    height: 10px;
+                    background: #ddd;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    .progress-bar {
+                        height: 100%;
+                        background: #28a745;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0%;
+                        transition: width 2s ease-in-out;
+                    }
+
+                    .percentage {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 0.9rem;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Apply the animation to each progress bar */
+.parameter {
+    &:hover .progress-bar {
+        width: attr(data-progress);
+    }
+}
+
+
+
+
+/***product name**/
+/* product-page.component.scss */
+.styled-product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) rotateY(0deg);
+
+    &:hover {
+        transform: translateY(-10px) perspective(1000px) rotateY(5deg);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-card-content {
+        position: relative;
+        z-index: 2;
+        padding: 20px 10px;
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .styled-hover-line {
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right, #28a745, #85d744);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width 0.4s ease-in-out;
+        }
+    }
+
+    &:hover .styled-hover-line {
+        width: 100% !important;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: rgba(40, 167, 69, 0.2);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    &:before {
+        top: -20px;
+        left: -20px;
+    }
+
+    &:after {
+        bottom: -20px;
+        right: -20px;
+    }
+}
+
+/***testimonial***/
+.container{
+    
+}
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    /* Set height for the container */
+}
+
+.testimonial-section {
+    height: 80% !important;
+    padding-bottom: 200px;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* Use absolute positioning to stack cards */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 80% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    cursor: pointer;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.testimonial-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial-card:not(.active) {
+    opacity: 0;
+    transform: translateY(100%);
+    /* Move cards out of view */
+}
