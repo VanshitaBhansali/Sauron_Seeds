@@ -9,6 +9,13 @@ export const coreRoutes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import(
+            './pages/home/home.component').then((m) => m.HomeComponent),
+      },
      {
         path: 'home',
         pathMatch: 'full',
